@@ -28,6 +28,10 @@ jobs:
           pip install ruff  
           ruff --output-format=github .
         continue-on-error: true  
+      # This does not generate junit and is meant to be used with coverage report -m
+      # - name: Test with pytest  
+      #   run: |  
+      #     coverage run -m pytest  -v -s 
       - name: Test with pytest
         run: |
           pip install pytest pytest-cov
