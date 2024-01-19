@@ -42,6 +42,7 @@ If there are conflicts due to your branch being outdated with other newer change
   git merge main
 ```
 Try to do this after you add a function and the corresponding test case for it.
+Also don't forget to run tests before you attempt to commit and merge.
 
 # References
 * https://pytest-with-eric.com/integrations/pytest-github-actions/
