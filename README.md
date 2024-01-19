@@ -1,6 +1,27 @@
 # pytest_CI_sample
 Learning about how pytest and CI for python
 
+# PyTest and Coverage
+You can run pytests using:
+```
+      - name: Test with pytest  
+        run: |  
+          coverage run -m pytest  -v -s
+```
+Or
+```
+      - name: Test with pytest
+        run: |
+          pip install pytest pytest-cov
+          pytest -v -s --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml --cov=. --cov-report=xml --cov-report=html
+```
+Then coverage can be reported using:
+```
+      - name: Generate Coverage Report  
+        run: |  
+          coverage report -m
+```
+
 # References
 * https://pytest-with-eric.com/integrations/pytest-github-actions/
 * https://bas.codes/posts/python-pytest-introduction
